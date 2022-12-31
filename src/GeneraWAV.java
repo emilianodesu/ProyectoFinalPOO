@@ -1,8 +1,8 @@
 public class GeneraWAV {
 
-    private int numCanales;
+    private short numCanales;
 
-    public GeneraWAV(int numCanales) {
+    public GeneraWAV(short numCanales) {
         this.numCanales = numCanales;
     }
 
