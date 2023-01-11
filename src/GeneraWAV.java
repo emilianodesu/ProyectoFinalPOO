@@ -105,12 +105,11 @@ public class GeneraWAV {
             salida.write(convertEndianndessInt(BytesArchivo), 0, bytesInt);
 
             // Generando señal senoidal
-            double angulo = (armonico * Math.PI * bytesShort) / iFrecuenciaMuestreo;
             int amplitud = 32760; 
             int muestra;
 
             for (int i = 0; i < iNumMuestras; i++) {
-                muestra = (int) Math.floor(amplitud * Math.sin(angulo * i));
+                muestra = (int) Math.floor(amplitud * Math.sin((armonico * Math.PI * bytesShort * i) / iFrecuenciaMuestreo));
                 salida.write(convertEndianndessInt(muestra), 0, bytesInt);
             }
             salida.close();
