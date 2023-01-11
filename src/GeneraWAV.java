@@ -106,7 +106,7 @@ public class GeneraWAV {
 
             // Generando señal senoidal
             double angulo = (armonico * Math.PI * bytesShort) / iFrecuenciaMuestreo;
-            int amplitud = 10000; // ?????
+            int amplitud = 32760; 
             int muestra;
 
             for (int i = 0; i < iNumMuestras; i++) {
